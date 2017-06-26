@@ -8,7 +8,7 @@
 
 #include <iostream>
 
-#include "unitests1.hpp"
+#include "unitests.hpp"
 using namespace std;
 int main(int argc, const char * argv[]) {
     collections_test();

@@ -1,13 +1,13 @@
 //
-//  unitests1.hpp
+//  unitests.hpp
 //  pluralsight
 //
 //  Created by gali zorea on 26/06/2017.
 //  Copyright © 2017 gali zorea. All rights reserved.
 //
 
-#ifndef unitests1_hpp
-#define unitests1_hpp
+#ifndef unitests_hpp
+#define unitests_hpp
 
 #include <stdio.h>
 
