@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C7CF9D691EF9B80C002678C7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D681EF9B80C002678C7 /* main.cpp */; };
+		C7CF9D711EF9B824002678C7 /* collections.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D6F1EF9B824002678C7 /* collections.cpp */; };
+		C7CF9D751EFC58F5002678C7 /* transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D731EFC58F5002678C7 /* transaction.cpp */; };
+		C7CF9D781EFC5905002678C7 /* account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D761EFC5905002678C7 /* account.cpp */; };
+		C7CF9D7D1F018C5E002678C7 /* unitests1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D7B1F018C5E002678C7 /* unitests1.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +28,15 @@
 
 /* Begin PBXFileReference section */
 		C7CF9D651EF9B80C002678C7 /* pluralsight */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pluralsight; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7CF9D681EF9B80C002678C7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C7CF9D681EF9B80C002678C7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = pluralsight/main.cpp; sourceTree = SOURCE_ROOT; };
+		C7CF9D6F1EF9B824002678C7 /* collections.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = collections.cpp; sourceTree = "<group>"; };
+		C7CF9D701EF9B824002678C7 /* collections.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = collections.hpp; sourceTree = "<group>"; };
+		C7CF9D731EFC58F5002678C7 /* transaction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = transaction.cpp; sourceTree = "<group>"; };
+		C7CF9D741EFC58F5002678C7 /* transaction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = transaction.hpp; sourceTree = "<group>"; };
+		C7CF9D761EFC5905002678C7 /* account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = account.cpp; sourceTree = "<group>"; };
+		C7CF9D771EFC5905002678C7 /* account.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = account.hpp; path = pluralsight/account.hpp; sourceTree = SOURCE_ROOT; };
+		C7CF9D7B1F018C5E002678C7 /* unitests1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unitests1.cpp; sourceTree = "<group>"; };
+		C7CF9D7C1F018C5E002678C7 /* unitests1.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = unitests1.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +69,41 @@
 		C7CF9D671EF9B80C002678C7 /* pluralsight */ = {
 			isa = PBXGroup;
 			children = (
+				C7CF9D7A1F018C2A002678C7 /* unitests */,
+				C7CF9D791F018BFD002678C7 /* collections */,
+				C7CF9D721EFC58D4002678C7 /* bank */,
 				C7CF9D681EF9B80C002678C7 /* main.cpp */,
 			);
 			path = pluralsight;
+			sourceTree = "<group>";
+		};
+		C7CF9D721EFC58D4002678C7 /* bank */ = {
+			isa = PBXGroup;
+			children = (
+				C7CF9D731EFC58F5002678C7 /* transaction.cpp */,
+				C7CF9D741EFC58F5002678C7 /* transaction.hpp */,
+				C7CF9D761EFC5905002678C7 /* account.cpp */,
+				C7CF9D771EFC5905002678C7 /* account.hpp */,
+			);
+			name = bank;
+			sourceTree = "<group>";
+		};
+		C7CF9D791F018BFD002678C7 /* collections */ = {
+			isa = PBXGroup;
+			children = (
+				C7CF9D6F1EF9B824002678C7 /* collections.cpp */,
+				C7CF9D701EF9B824002678C7 /* collections.hpp */,
+			);
+			name = collections;
+			sourceTree = "<group>";
+		};
+		C7CF9D7A1F018C2A002678C7 /* unitests */ = {
+			isa = PBXGroup;
+			children = (
+				C7CF9D7B1F018C5E002678C7 /* unitests1.cpp */,
+				C7CF9D7C1F018C5E002678C7 /* unitests1.hpp */,
+			);
+			name = unitests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7CF9D751EFC58F5002678C7 /* transaction.cpp in Sources */,
+				C7CF9D781EFC5905002678C7 /* account.cpp in Sources */,
 				C7CF9D691EF9B80C002678C7 /* main.cpp in Sources */,
+				C7CF9D7D1F018C5E002678C7 /* unitests1.cpp in Sources */,
+				C7CF9D711EF9B824002678C7 /* collections.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

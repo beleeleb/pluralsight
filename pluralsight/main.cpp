@@ -8,8 +8,11 @@
 
 #include <iostream>
 
+#include "unitests1.hpp"
+using namespace std;
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    collections_test();
+    bank_test();
+    
     return 0;
 }
