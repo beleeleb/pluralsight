@@ -22,7 +22,7 @@ void transaction::newAction(string action, double amount, double balance)
 
 }
 
-string transaction::report()
+string transaction::report() const
 {
 
     return m_action;

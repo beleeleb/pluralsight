@@ -11,8 +11,10 @@
 #include "unitests.hpp"
 using namespace std;
 int main(int argc, const char * argv[]) {
-    collections_test();
-    bank_test();
+    casts_test();
+    Person_class_test();
+    //collections_test();
+    //bank_test();
     
     return 0;
 }

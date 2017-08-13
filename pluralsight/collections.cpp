@@ -17,6 +17,8 @@ void myvector()
         vi.push_back(i);
     }
     
+    vi.push_back(static_cast<int>(4.5));
+    
     for(auto item: vi)
     {
         cout << item << " ";
