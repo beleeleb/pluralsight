@@ -10,5 +10,14 @@
 #define Tweeter_hpp
 
 #include <stdio.h>
-
+#include "Person.hpp"
+#include <string>
+class Tweeter: public Person
+{
+private:
+    std::string tweeterhandle;
+public:
+    Tweeter(std::string o_firstName, std::string o_lastName, int o_age, std::string o_tweethandle);
+    ~Tweeter();
+};
 #endif /* Tweeter_hpp */

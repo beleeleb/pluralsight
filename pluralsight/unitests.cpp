@@ -50,4 +50,6 @@ void Person_class_test()
     Person p1; //since no parameters are passed it will be constructed by default values
     
     Person p2("yan", "pelov", 12);
+    
+    Tweeter t1("moshe", "snow", 555, "@whatever");
 }

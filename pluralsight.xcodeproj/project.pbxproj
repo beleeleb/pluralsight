@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C79B15E11F40C50100EB9280 /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C79B15DF1F40C50100EB9280 /* Person.cpp */; };
+		C79B15E61F40DDF200EB9280 /* Tweeter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C79B15E41F40DDF200EB9280 /* Tweeter.cpp */; };
 		C7CF9D691EF9B80C002678C7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D681EF9B80C002678C7 /* main.cpp */; };
 		C7CF9D711EF9B824002678C7 /* collections.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D6F1EF9B824002678C7 /* collections.cpp */; };
 		C7CF9D751EFC58F5002678C7 /* transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D731EFC58F5002678C7 /* transaction.cpp */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		C79B15DF1F40C50100EB9280 /* Person.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Person.cpp; sourceTree = "<group>"; };
 		C79B15E01F40C50100EB9280 /* Person.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Person.hpp; sourceTree = "<group>"; };
+		C79B15E41F40DDF200EB9280 /* Tweeter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tweeter.cpp; sourceTree = "<group>"; };
+		C79B15E51F40DDF200EB9280 /* Tweeter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tweeter.hpp; sourceTree = "<group>"; };
 		C7CF9D651EF9B80C002678C7 /* pluralsight */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pluralsight; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CF9D681EF9B80C002678C7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = pluralsight/main.cpp; sourceTree = SOURCE_ROOT; };
 		C7CF9D6F1EF9B824002678C7 /* collections.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = collections.cpp; sourceTree = "<group>"; };
@@ -61,6 +64,8 @@
 			children = (
 				C79B15DF1F40C50100EB9280 /* Person.cpp */,
 				C79B15E01F40C50100EB9280 /* Person.hpp */,
+				C79B15E41F40DDF200EB9280 /* Tweeter.cpp */,
+				C79B15E51F40DDF200EB9280 /* Tweeter.hpp */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				C7CF9D781EFC5905002678C7 /* account.cpp in Sources */,
 				C79B15E11F40C50100EB9280 /* Person.cpp in Sources */,
 				C7CF9D691EF9B80C002678C7 /* main.cpp in Sources */,
+				C79B15E61F40DDF200EB9280 /* Tweeter.cpp in Sources */,
 				C7CF9D7D1F018C5E002678C7 /* unitests.cpp in Sources */,
 				C7CF9D811F0EBFE2002678C7 /* casts.cpp in Sources */,
 				C7CF9D711EF9B824002678C7 /* collections.cpp in Sources */,
