@@ -10,7 +10,8 @@
 
 void bank_test(void)
 {
-    account a1( 0.0);
+    const double start_amount =0.0;
+    account a1(start_amount);
     
     for (auto item: a1.report())
     {
@@ -36,4 +37,17 @@ void bank_test(void)
 void collections_test(void)
 {
      myvector();
+}
+
+void casts_test(void)
+{
+    demo_casts();
+}
+
+void Person_class_test()
+{
+    
+    Person p1; //since no parameters are passed it will be constructed by default values
+    
+    Person p2("yan", "pelov", 12);
 }

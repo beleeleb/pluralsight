@@ -13,10 +13,16 @@
 
 #include "collections.hpp"
 #include "account.hpp"
+#include "casts.hpp"
+#include "Person.hpp"
 
 void bank_test(void);
 
 void collections_test(void);
+
+void casts_test(void);
+
+void Person_class_test();
 
 
 #endif /* unitests1_hpp */

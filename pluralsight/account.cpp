@@ -22,9 +22,8 @@ bool account::withdraw(double value)
     return false;
 }
 
-account::account(double init_amount)
+account::account(double init_amount): m_amount(init_amount)
 {
-    m_amount = init_amount;
 }
     
 
@@ -42,7 +41,7 @@ bool account::deposit(double value)
     return false;
 }
 
-vector <string> account::report()
+vector <string> account::report() const
 {
     vector <string> report;
     

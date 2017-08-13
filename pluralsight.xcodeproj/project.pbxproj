@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C79B15E11F40C50100EB9280 /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C79B15DF1F40C50100EB9280 /* Person.cpp */; };
 		C7CF9D691EF9B80C002678C7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D681EF9B80C002678C7 /* main.cpp */; };
 		C7CF9D711EF9B824002678C7 /* collections.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D6F1EF9B824002678C7 /* collections.cpp */; };
 		C7CF9D751EFC58F5002678C7 /* transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D731EFC58F5002678C7 /* transaction.cpp */; };
 		C7CF9D781EFC5905002678C7 /* account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D761EFC5905002678C7 /* account.cpp */; };
 		C7CF9D7D1F018C5E002678C7 /* unitests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D7B1F018C5E002678C7 /* unitests.cpp */; };
+		C7CF9D811F0EBFE2002678C7 /* casts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D7F1F0EBFE2002678C7 /* casts.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C79B15DF1F40C50100EB9280 /* Person.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Person.cpp; sourceTree = "<group>"; };
+		C79B15E01F40C50100EB9280 /* Person.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Person.hpp; sourceTree = "<group>"; };
 		C7CF9D651EF9B80C002678C7 /* pluralsight */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pluralsight; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CF9D681EF9B80C002678C7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = pluralsight/main.cpp; sourceTree = SOURCE_ROOT; };
 		C7CF9D6F1EF9B824002678C7 /* collections.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = collections.cpp; sourceTree = "<group>"; };
@@ -37,6 +41,8 @@
 		C7CF9D771EFC5905002678C7 /* account.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = account.hpp; path = pluralsight/account.hpp; sourceTree = SOURCE_ROOT; };
 		C7CF9D7B1F018C5E002678C7 /* unitests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unitests.cpp; sourceTree = "<group>"; };
 		C7CF9D7C1F018C5E002678C7 /* unitests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = unitests.hpp; sourceTree = "<group>"; };
+		C7CF9D7F1F0EBFE2002678C7 /* casts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = casts.cpp; sourceTree = "<group>"; };
+		C7CF9D801F0EBFE2002678C7 /* casts.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = casts.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C79B15DE1F40C4E300EB9280 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				C79B15DF1F40C50100EB9280 /* Person.cpp */,
+				C79B15E01F40C50100EB9280 /* Person.hpp */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
 		C7CF9D5C1EF9B80C002678C7 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +84,8 @@
 		C7CF9D671EF9B80C002678C7 /* pluralsight */ = {
 			isa = PBXGroup;
 			children = (
+				C79B15DE1F40C4E300EB9280 /* classes */,
+				C7CF9D7E1F0EBFB1002678C7 /* casts */,
 				C7CF9D7A1F018C2A002678C7 /* unitests */,
 				C7CF9D791F018BFD002678C7 /* collections */,
 				C7CF9D721EFC58D4002678C7 /* bank */,
@@ -104,6 +121,15 @@
 				C7CF9D7C1F018C5E002678C7 /* unitests.hpp */,
 			);
 			name = unitests;
+			sourceTree = "<group>";
+		};
+		C7CF9D7E1F0EBFB1002678C7 /* casts */ = {
+			isa = PBXGroup;
+			children = (
+				C7CF9D7F1F0EBFE2002678C7 /* casts.cpp */,
+				C7CF9D801F0EBFE2002678C7 /* casts.hpp */,
+			);
+			name = casts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,8 +191,10 @@
 			files = (
 				C7CF9D751EFC58F5002678C7 /* transaction.cpp in Sources */,
 				C7CF9D781EFC5905002678C7 /* account.cpp in Sources */,
+				C79B15E11F40C50100EB9280 /* Person.cpp in Sources */,
 				C7CF9D691EF9B80C002678C7 /* main.cpp in Sources */,
 				C7CF9D7D1F018C5E002678C7 /* unitests.cpp in Sources */,
+				C7CF9D811F0EBFE2002678C7 /* casts.cpp in Sources */,
 				C7CF9D711EF9B824002678C7 /* collections.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +324,7 @@
 				C7CF9D6E1EF9B80C002678C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -22,7 +22,7 @@ private:
 public:
     bool withdraw(double value);
     bool deposit(double value);
-    std::vector <std::string>  report();
+    std::vector <std::string>  report() const;
     account(double init_amount);
 
 };

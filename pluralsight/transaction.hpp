@@ -18,6 +18,6 @@ private:
     double m_amount;
 public:
     void newAction(std::string action, double amount, double balance);
-    std::string report();
+    std::string report() const;
 };
 #endif /* transaction_hpp */
