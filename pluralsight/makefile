@@ -13,9 +13,9 @@ $(BINARY): $(OBJS)
 %.o: %.cpp
 	$(CC) $(CPP_FLAGS) -o $@ -c $< #==pattern matched dependency
 
-main.o : unitests.hpp collections.hpp transaction.hpp account.hpp casts.hpp Person.hpp Tweeter.hpp
+main.o : unitests.hpp collections.hpp transaction.hpp account.hpp casts.hpp Person.hpp Tweeter.hpp Status.hpp
 
-unitests.o : collections.hpp transaction.hpp account.hpp casts.hpp Person.hpp Tweeter.hpp
+unitests.o : unitests.hpp collections.hpp transaction.hpp account.hpp casts.hpp Person.hpp Tweeter.hpp Status.hpp
 
 collections.o : collections.hpp
 

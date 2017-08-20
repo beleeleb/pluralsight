@@ -34,6 +34,7 @@
 		C79B15E01F40C50100EB9280 /* Person.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Person.hpp; sourceTree = "<group>"; };
 		C79B15E41F40DDF200EB9280 /* Tweeter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tweeter.cpp; sourceTree = "<group>"; };
 		C79B15E51F40DDF200EB9280 /* Tweeter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tweeter.hpp; sourceTree = "<group>"; };
+		C79B15E81F422B9A00EB9280 /* Status.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Status.hpp; sourceTree = "<group>"; };
 		C7CF9D651EF9B80C002678C7 /* pluralsight */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pluralsight; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CF9D681EF9B80C002678C7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = pluralsight/main.cpp; sourceTree = SOURCE_ROOT; };
 		C7CF9D6F1EF9B824002678C7 /* collections.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = collections.cpp; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 				C79B15E01F40C50100EB9280 /* Person.hpp */,
 				C79B15E41F40DDF200EB9280 /* Tweeter.cpp */,
 				C79B15E51F40DDF200EB9280 /* Tweeter.hpp */,
+				C79B15E81F422B9A00EB9280 /* Status.hpp */,
 			);
 			name = classes;
 			sourceTree = "<group>";

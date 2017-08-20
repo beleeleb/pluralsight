@@ -14,7 +14,6 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-using namespace std;
 void myvector();
 
 #endif /* collections_hpp */

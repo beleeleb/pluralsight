@@ -7,6 +7,7 @@
 //
 
 #include "collections.hpp"
+using namespace std;
 
 void myvector()
 {

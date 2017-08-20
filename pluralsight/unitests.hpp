@@ -9,12 +9,10 @@
 #ifndef unitests_hpp
 #define unitests_hpp
 
-#include <stdio.h>
-
 #include "collections.hpp"
 #include "account.hpp"
 #include "casts.hpp"
-//#include "Person.hpp"
+#include "Person.hpp"
 #include "Tweeter.hpp"
 
 void bank_test(void);
@@ -24,5 +22,11 @@ void collections_test(void);
 void casts_test(void);
 
 void Person_class_test();
+void operators();
+bool isPrime(int number);
+void addThreeByVal(int number);
+void addThreeByRef(int& number);
+void immediateIF();
+
 
 #endif /* unitests1_hpp */
