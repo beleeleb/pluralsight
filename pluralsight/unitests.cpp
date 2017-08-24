@@ -50,7 +50,7 @@ void Person_class_test()
     
     Person p1; //since no parameters are passed it will be constructed by default values
     
-    Person p2("yan", "pelov", 12);
+    Person p2("zyan", "zpelov", 12);
     
     Tweeter t1("moshe", "snow", 555, "@whatever");
     cout << "curr age: "<< t1.getAge() << endl;
@@ -58,9 +58,14 @@ void Person_class_test()
     cout << "new age: "<< t1.getAge() <<endl;
     Status s = pending;
     s = approved;
+    
+    p1 < p2 ? (cout << "p1 is less then p2" << endl):(cout << "p1 is greater then p2" << endl);
+    p1 < 300? (cout << "p1 is less then 300" << endl):(cout << "p1 is greater then 300" << endl);
+    300 < p1? (cout << "300 is less then p1" << endl):(cout << "300 is greater then p1" << endl);
+
 }
 
-void operators()
+void factorial()
 {
     cout << "factorial check: enter number" << endl;
     int number;
@@ -89,23 +94,23 @@ bool isPrime(int number)
 {
     int x;
     bool prime = true;
-    for(x=2;;x++)
+    for(x=2;;x++) //TODO: should alter algroithm to consider 0 and 1 as well, as these aren't primes
     {
         if(number%x == 0)
         {
-            if(number/x > x)
+            if(number/x >= x)
             {
                 prime = false;
-                cout << "factor: " <<x <<endl;
-                
-                cout << "factor: " << number/x << endl;
+               // cout << "factor: " <<x <<endl;
+                //cout << "factor: " << number/x << endl;
             }
             
             else break;
         }
         
     }
-    
+    if(prime)
+        cout << "prime: " << number << endl;
     return prime;
 }
 
@@ -131,3 +136,32 @@ void immediateIF()
     }
 }
 
+void operators_test()
+{
+    int i;
+    int count = 0;
+    for (i = 2; i < 101; i++)
+    {
+        count += isPrime(i)?1:0;
+        
+    }
+    
+    cout << "there are " << count << " primes from 2 to 100" << endl;
+    
+    int j;
+    
+    cout << "enter num1: " << endl;
+    cin >> i;
+    cout << "enter num2: " <<endl;
+    cin >> j;
+    
+    if(j && !(i % j) ) //j protects divide by zero
+    {
+        cout << i << " is a multiplie of "<< j<<endl;
+    }
+    
+    else
+    {
+        cout << i << " is not multiplie of "<< j<<endl;
+    }
+}

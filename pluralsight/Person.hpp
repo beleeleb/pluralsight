@@ -23,6 +23,11 @@ public:
     std::string getName();
     int getAge() {return m_age;}; //inline functions
     void setAge(int newage){ m_age = newage;}; //inline functions
-    
+    bool operator < (Person& p ); //pass by reference
+    bool operator < (int num);
+    friend bool operator< (int num, Person& p); //we decalre friend here in order to allow access to private member, in case we don't have a public function allowing access to the private member.
+
 };
+
+bool operator< (int num, Person& p); //pass by reference
 #endif /* Person_hpp */

@@ -22,4 +22,20 @@ std::string Person::getName()
 {
     return "first - " + m_firstName + " last - " + m_lastName + " age - " + to_string(getAge()); // could also use std::ostringstream  instead of to_string
 }
+
+bool Person::operator <  (Person& p )
+{
+    return m_age < p.m_age;
+}
+
+bool Person::operator < (int num)
+{
+    return m_age < num;
+}
+
+
+bool operator< (int num, Person& p)
+{
+    return num < p.getAge(); //we could use p.m_age here because of decalring friend. No need here though because we already have a public function for the private member.
+}
     

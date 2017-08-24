@@ -11,12 +11,14 @@
 #include "unitests.hpp"
 using namespace std;
 int main(int argc, const char * argv[]) {
-    operators();
-    casts_test();
+    //factorial();
+    //casts_test();
     Person_class_test();
-    immediateIF();
+    //immediateIF();
     //collections_test();
     //bank_test();
+    operators_test();
+
     
     return 0;
 }

@@ -22,11 +22,12 @@ void collections_test(void);
 void casts_test(void);
 
 void Person_class_test();
-void operators();
+void factorial();
 bool isPrime(int number);
 void addThreeByVal(int number);
 void addThreeByRef(int& number);
 void immediateIF();
+void operators_test();
 
 
 #endif /* unitests1_hpp */
