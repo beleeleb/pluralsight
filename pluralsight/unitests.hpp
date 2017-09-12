@@ -14,6 +14,17 @@
 #include "casts.hpp"
 #include "Person.hpp"
 #include "Tweeter.hpp"
+#include "Accum.hpp"
+#include "PtrsnRefs.hpp"
+#include "Const.hpp"
+
+template <class T>
+T max(T& t1, T& t2)
+{
+    return t1 < t2 ? t2 : t1;
+}
+
+
 
 void bank_test(void);
 
@@ -28,6 +39,9 @@ void addThreeByVal(int number);
 void addThreeByRef(int& number);
 void immediateIF();
 void operators_test();
-
+void max_template_test();
+void class_template_test();
+void testPtrsnRefs();
+void testConst();
 
 #endif /* unitests1_hpp */

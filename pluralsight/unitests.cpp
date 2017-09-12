@@ -165,3 +165,57 @@ void operators_test()
         cout << i << " is not multiplie of "<< j<<endl;
     }
 }
+
+void max_template_test()
+{
+    string str1("aaa");
+    string str2("bbb");
+    Person p1("shimi", "tavori", 128);
+    Person p2("miki", "buganim", 55);
+    
+    cout << "which str is bigger? " << max(str1,str2) << endl;
+    cout << "which Person is bigger? " << max(p1, p2).getName() << endl;
+    cout << "which num is bigger? " << max<double>(33, 4.5) << endl;//explict since compiler not sure whether we want here an int or double
+}
+
+void class_template_test()
+{
+    
+    string s1("hello");
+    string s2("world");
+    
+    Accum <int> running(0);
+    Accum <string> string_total("");
+
+    for (int i =1; i<101; i++)
+    {
+        cout << std::to_string(running+=i) << endl; //running+=i return type int not Accum <int>
+    }
+    
+    cout << endl << "total is: " << running.getTotal() <<endl;
+
+    
+    string_total+=s1;
+    string_total+=s2;
+
+    cout << string_total.getTotal() <<endl;
+    
+    Accum <Person> pplSum(0); //using a specialized template for Person. we do so because we don't have an overload for += operator.
+    Person p1("shosh", "bu", 123);
+    Person p2("don", "kishot", 543);
+    
+    pplSum+=p1;
+    pplSum+=p2;
+    
+    cout << "ppl sum: " << pplSum.getTotal()<< endl;
+}
+
+void testPtrsnRefs()
+{
+    ptrsDemo();
+}
+
+void testConst()
+{
+    constExamples();
+}

@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		C79B15E11F40C50100EB9280 /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C79B15DF1F40C50100EB9280 /* Person.cpp */; };
 		C79B15E61F40DDF200EB9280 /* Tweeter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C79B15E41F40DDF200EB9280 /* Tweeter.cpp */; };
+		C79B15EF1F50AA1600EB9280 /* Accum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C79B15ED1F50AA1600EB9280 /* Accum.cpp */; };
+		C7B1D5121F5B20EA004B2E23 /* PtrsnRefs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7B1D5101F5B20EA004B2E23 /* PtrsnRefs.cpp */; };
 		C7CF9D691EF9B80C002678C7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D681EF9B80C002678C7 /* main.cpp */; };
 		C7CF9D711EF9B824002678C7 /* collections.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D6F1EF9B824002678C7 /* collections.cpp */; };
 		C7CF9D751EFC58F5002678C7 /* transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D731EFC58F5002678C7 /* transaction.cpp */; };
 		C7CF9D781EFC5905002678C7 /* account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D761EFC5905002678C7 /* account.cpp */; };
 		C7CF9D7D1F018C5E002678C7 /* unitests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D7B1F018C5E002678C7 /* unitests.cpp */; };
 		C7CF9D811F0EBFE2002678C7 /* casts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D7F1F0EBFE2002678C7 /* casts.cpp */; };
+		C7DD1C581F686BB100005D0D /* Const.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7DD1C561F686BB100005D0D /* Const.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +38,10 @@
 		C79B15E41F40DDF200EB9280 /* Tweeter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tweeter.cpp; sourceTree = "<group>"; };
 		C79B15E51F40DDF200EB9280 /* Tweeter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tweeter.hpp; sourceTree = "<group>"; };
 		C79B15E81F422B9A00EB9280 /* Status.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Status.hpp; sourceTree = "<group>"; };
+		C79B15ED1F50AA1600EB9280 /* Accum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Accum.cpp; sourceTree = "<group>"; };
+		C79B15EE1F50AA1600EB9280 /* Accum.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Accum.hpp; sourceTree = "<group>"; };
+		C7B1D5101F5B20EA004B2E23 /* PtrsnRefs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PtrsnRefs.cpp; sourceTree = "<group>"; };
+		C7B1D5111F5B20EA004B2E23 /* PtrsnRefs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PtrsnRefs.hpp; sourceTree = "<group>"; };
 		C7CF9D651EF9B80C002678C7 /* pluralsight */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pluralsight; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CF9D681EF9B80C002678C7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = pluralsight/main.cpp; sourceTree = SOURCE_ROOT; };
 		C7CF9D6F1EF9B824002678C7 /* collections.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = collections.cpp; sourceTree = "<group>"; };
@@ -47,6 +54,8 @@
 		C7CF9D7C1F018C5E002678C7 /* unitests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = unitests.hpp; sourceTree = "<group>"; };
 		C7CF9D7F1F0EBFE2002678C7 /* casts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = casts.cpp; sourceTree = "<group>"; };
 		C7CF9D801F0EBFE2002678C7 /* casts.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = casts.hpp; sourceTree = "<group>"; };
+		C7DD1C561F686BB100005D0D /* Const.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Const.cpp; sourceTree = "<group>"; };
+		C7DD1C571F686BB100005D0D /* Const.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Const.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +77,21 @@
 				C79B15E41F40DDF200EB9280 /* Tweeter.cpp */,
 				C79B15E51F40DDF200EB9280 /* Tweeter.hpp */,
 				C79B15E81F422B9A00EB9280 /* Status.hpp */,
+				C79B15ED1F50AA1600EB9280 /* Accum.cpp */,
+				C79B15EE1F50AA1600EB9280 /* Accum.hpp */,
 			);
 			name = classes;
+			sourceTree = "<group>";
+		};
+		C7B1D5131F5B2111004B2E23 /* pointers */ = {
+			isa = PBXGroup;
+			children = (
+				C7B1D5101F5B20EA004B2E23 /* PtrsnRefs.cpp */,
+				C7B1D5111F5B20EA004B2E23 /* PtrsnRefs.hpp */,
+				C7DD1C561F686BB100005D0D /* Const.cpp */,
+				C7DD1C571F686BB100005D0D /* Const.hpp */,
+			);
+			name = pointers;
 			sourceTree = "<group>";
 		};
 		C7CF9D5C1EF9B80C002678C7 = {
@@ -91,6 +113,7 @@
 		C7CF9D671EF9B80C002678C7 /* pluralsight */ = {
 			isa = PBXGroup;
 			children = (
+				C7B1D5131F5B2111004B2E23 /* pointers */,
 				C79B15DE1F40C4E300EB9280 /* classes */,
 				C7CF9D7E1F0EBFB1002678C7 /* casts */,
 				C7CF9D7A1F018C2A002678C7 /* unitests */,
@@ -196,12 +219,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C79B15EF1F50AA1600EB9280 /* Accum.cpp in Sources */,
+				C7B1D5121F5B20EA004B2E23 /* PtrsnRefs.cpp in Sources */,
 				C7CF9D751EFC58F5002678C7 /* transaction.cpp in Sources */,
 				C7CF9D781EFC5905002678C7 /* account.cpp in Sources */,
 				C79B15E11F40C50100EB9280 /* Person.cpp in Sources */,
 				C7CF9D691EF9B80C002678C7 /* main.cpp in Sources */,
 				C79B15E61F40DDF200EB9280 /* Tweeter.cpp in Sources */,
 				C7CF9D7D1F018C5E002678C7 /* unitests.cpp in Sources */,
+				C7DD1C581F686BB100005D0D /* Const.cpp in Sources */,
 				C7CF9D811F0EBFE2002678C7 /* casts.cpp in Sources */,
 				C7CF9D711EF9B824002678C7 /* collections.cpp in Sources */,
 			);

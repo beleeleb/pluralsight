@@ -18,23 +18,23 @@ Person::~Person()
 {
     std::cout << "destruct: " << getName() <<std::endl;
 }
-std::string Person::getName()
+std::string Person::getName() const
 {
     return "first - " + m_firstName + " last - " + m_lastName + " age - " + to_string(getAge()); // could also use std::ostringstream  instead of to_string
 }
 
-bool Person::operator <  (Person& p )
+bool Person::operator <  (const Person& p ) const
 {
     return m_age < p.m_age;
 }
 
-bool Person::operator < (int num)
+bool Person::operator < (int num) const
 {
     return m_age < num;
 }
 
 
-bool operator< (int num, Person& p)
+bool operator< (int num,const Person& p)
 {
     return num < p.getAge(); //we could use p.m_age here because of decalring friend. No need here though because we already have a public function for the private member.
 }
