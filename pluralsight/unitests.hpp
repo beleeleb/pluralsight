@@ -17,7 +17,7 @@
 #include "Accum.hpp"
 #include "PtrsnRefs.hpp"
 #include "Const.hpp"
-
+#include "Resource.hpp"
 template <class T>
 T max(T& t1, T& t2)
 {
@@ -43,5 +43,7 @@ void max_template_test();
 void class_template_test();
 void testPtrsnRefs();
 void testConst();
+void allocTest();
+
 
 #endif /* unitests1_hpp */

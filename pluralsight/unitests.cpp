@@ -219,3 +219,25 @@ void testConst()
 {
     constExamples();
 }
+
+void allocTest()
+{
+    Resource first("alon");
+    string local_name = first.getName();
+    cout << local_name << endl;
+    
+    Resource *rptr = new Resource("demo");
+    string str  = rptr->getName();
+    
+    Resource *rptr2 = rptr;//makes a copy
+    string str2 = rptr2->getName();
+    cout << "str2: "<< str2 << endl;
+    delete rptr;
+
+    //string str3 = rptr->getName(); // use of dangling ptr
+    //cout << "str3: "<< str3 << endl;
+    rptr = nullptr;
+    delete rptr; //no problem deleting a null ptr - just returns, if we wouldn't have set rptr to null, it would have cause a double free error
+    delete rptr2; //delete the address of rptr when it's already set to null
+    
+}

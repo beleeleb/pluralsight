@@ -11,6 +11,7 @@
 		C79B15E61F40DDF200EB9280 /* Tweeter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C79B15E41F40DDF200EB9280 /* Tweeter.cpp */; };
 		C79B15EF1F50AA1600EB9280 /* Accum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C79B15ED1F50AA1600EB9280 /* Accum.cpp */; };
 		C7B1D5121F5B20EA004B2E23 /* PtrsnRefs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7B1D5101F5B20EA004B2E23 /* PtrsnRefs.cpp */; };
+		C7B79D521F6EFECE00338198 /* Resource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7B79D501F6EFECE00338198 /* Resource.cpp */; };
 		C7CF9D691EF9B80C002678C7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D681EF9B80C002678C7 /* main.cpp */; };
 		C7CF9D711EF9B824002678C7 /* collections.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D6F1EF9B824002678C7 /* collections.cpp */; };
 		C7CF9D751EFC58F5002678C7 /* transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D731EFC58F5002678C7 /* transaction.cpp */; };
@@ -18,6 +19,7 @@
 		C7CF9D7D1F018C5E002678C7 /* unitests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D7B1F018C5E002678C7 /* unitests.cpp */; };
 		C7CF9D811F0EBFE2002678C7 /* casts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CF9D7F1F0EBFE2002678C7 /* casts.cpp */; };
 		C7DD1C581F686BB100005D0D /* Const.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7DD1C561F686BB100005D0D /* Const.cpp */; };
+		C7DD1C5A1F68735400005D0D /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = C7DD1C591F68735400005D0D /* makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +44,8 @@
 		C79B15EE1F50AA1600EB9280 /* Accum.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Accum.hpp; sourceTree = "<group>"; };
 		C7B1D5101F5B20EA004B2E23 /* PtrsnRefs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PtrsnRefs.cpp; sourceTree = "<group>"; };
 		C7B1D5111F5B20EA004B2E23 /* PtrsnRefs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PtrsnRefs.hpp; sourceTree = "<group>"; };
+		C7B79D501F6EFECE00338198 /* Resource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Resource.cpp; sourceTree = "<group>"; };
+		C7B79D511F6EFECE00338198 /* Resource.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Resource.hpp; sourceTree = "<group>"; };
 		C7CF9D651EF9B80C002678C7 /* pluralsight */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pluralsight; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CF9D681EF9B80C002678C7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = pluralsight/main.cpp; sourceTree = SOURCE_ROOT; };
 		C7CF9D6F1EF9B824002678C7 /* collections.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = collections.cpp; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 		C7CF9D801F0EBFE2002678C7 /* casts.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = casts.hpp; sourceTree = "<group>"; };
 		C7DD1C561F686BB100005D0D /* Const.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Const.cpp; sourceTree = "<group>"; };
 		C7DD1C571F686BB100005D0D /* Const.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Const.hpp; sourceTree = "<group>"; };
+		C7DD1C591F68735400005D0D /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +95,8 @@
 				C7B1D5111F5B20EA004B2E23 /* PtrsnRefs.hpp */,
 				C7DD1C561F686BB100005D0D /* Const.cpp */,
 				C7DD1C571F686BB100005D0D /* Const.hpp */,
+				C7B79D501F6EFECE00338198 /* Resource.cpp */,
+				C7B79D511F6EFECE00338198 /* Resource.hpp */,
 			);
 			name = pointers;
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 				C7CF9D791F018BFD002678C7 /* collections */,
 				C7CF9D721EFC58D4002678C7 /* bank */,
 				C7CF9D681EF9B80C002678C7 /* main.cpp */,
+				C7DD1C591F68735400005D0D /* makefile */,
 			);
 			path = pluralsight;
 			sourceTree = "<group>";
@@ -220,7 +228,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C79B15EF1F50AA1600EB9280 /* Accum.cpp in Sources */,
+				C7B79D521F6EFECE00338198 /* Resource.cpp in Sources */,
 				C7B1D5121F5B20EA004B2E23 /* PtrsnRefs.cpp in Sources */,
+				C7DD1C5A1F68735400005D0D /* makefile in Sources */,
 				C7CF9D751EFC58F5002678C7 /* transaction.cpp in Sources */,
 				C7CF9D781EFC5905002678C7 /* account.cpp in Sources */,
 				C79B15E11F40C50100EB9280 /* Person.cpp in Sources */,

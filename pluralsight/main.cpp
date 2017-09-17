@@ -22,6 +22,7 @@ int main(int argc, const char * argv[]) {
     //operators_test();
     testPtrsnRefs();
     testConst();
+    allocTest();
     
     return 0;
 }
