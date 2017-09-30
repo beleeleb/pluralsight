@@ -11,10 +11,10 @@
 using namespace std;
 Resource::Resource(std::string o_name):m_name(o_name)
 {
-    cout << "constructing " << m_name << endl;
+    cout << "construct resource: " << m_name << endl;
 }
 Resource::~Resource()
 {
-    cout << "destructing " << m_name << endl;
+    cout << "destruct resource: " << m_name << endl;
 }
 

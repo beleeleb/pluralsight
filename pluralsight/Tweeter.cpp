@@ -12,10 +12,15 @@
 using namespace std;
 Tweeter::Tweeter(std::string o_firstName, std::string o_lastName, int o_age, std::string o_tweethandle):Person(o_firstName, o_lastName, o_age), tweeterhandle(o_tweethandle)
 {
-    cout << "construncting tweeter: " << tweeterhandle << endl;
+    cout << "construct tweeter: " << tweeterhandle << endl;
 }
 
 Tweeter::~Tweeter()
 {
-    cout << "destructing tweeter" << endl;
+    cout << "destruct tweeter: " << tweeterhandle << endl;
+}
+
+std::string Tweeter::getName() const
+{
+    return Person::getName() + " tweet: @" + tweeterhandle;
 }

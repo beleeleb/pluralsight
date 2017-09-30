@@ -8,6 +8,7 @@
 
 #include "unitests.hpp"
 #include "Status.hpp"
+#include <memory>
 using namespace std;
 void bank_test(void)
 {
@@ -236,8 +237,80 @@ void allocTest()
 
     //string str3 = rptr->getName(); // use of dangling ptr
     //cout << "str3: "<< str3 << endl;
-    rptr = nullptr;
+   /* rptr = nullptr;
     delete rptr; //no problem deleting a null ptr - just returns, if we wouldn't have set rptr to null, it would have cause a double free error
-    delete rptr2; //delete the address of rptr when it's already set to null
+    delete rptr2; //delete the address of rptr when it's already set to null*/
+    
+}
+
+void memTest()
+{
+    Person jake("jake", "ripper", 123);
+    jake.addResource();
+    jake.setName("jake2", "ripper2");
+    jake.setAge(456);
+
+   jake.addResource();
+    Person jake2 = jake;
+    jake = jake2;
+    cout << "name of resource: " << jake.getResourceName() << endl;
+}
+
+void inheritTest()
+{
+    Tweeter hashtag("john", "travolta", 167, "atwork");
+    cout << hashtag.getName() << endl;
+    
+    Person* dudu = new Person("dudu", "topaz", 47);
+    Tweeter* shop = new Tweeter("don", "kishot", 33, "shopify");
+    
+    Person* pHandle = shop;
+    cout << dudu->getName() << endl;
+    cout << shop->getName() << endl;
+    cout << pHandle->getName() << endl;
+    delete dudu;
+    delete pHandle;
+    
+    shared_ptr<Person> sp1 = make_shared<Person>("auto", "pilot", 3);
+    auto sp2 = make_shared<Person>("auto", "vehicle", 4); //auto knows already what is the expetced return type
+    
+    shared_ptr<Person>sp3 = make_shared<Tweeter>("loko", "moto", 5, "walla"); //no problem setting a derived class pointer to a base class pointer, but if we do so with copying solid object, we will encounter slicing.
+    cout << sp3->getName() << endl;
+    
+    Tweeter localT("eee", "aaa", 134, "athome");
+
+    Person localP;// = localT; //slicing happens if we copy solid object to another
+    Person& refP = localT; //slicing will be avoided if we use reference
+    cout << localP.getName() << endl;
+    cout << refP.getName() << endl;
+
+}
+
+void cppCastings()
+{
+    Tweeter t1("non", "greta", 333, "atschool");
+    Person *p = &t1; //set p to point to tweeter, polymorphic
+    cout << p->getName() << endl;
+    //Tweeter* t2  = p; // no way to init dervied class from base without casting the handle to a dervied one.
+    Tweeter* t2  = static_cast<Tweeter*>(p); // We need to use static_cast.
+    //int i = 6;
+    //Tweeter* t3 = (Tweeter*)&i;  //we could c style cast to allow this but it won't check the validity of the type we are using
+    //Tweeter* t4 = static_cast<Tweeter*>(&i);  //static cast will warn us at compile time here that we can't case from int* to Tweeter*.
+    Resource something("check");
+    Tweeter* t5 = dynamic_cast<Tweeter*>(&something); //dynamic_cast can only accept polymorphic and non primitive type.
+
+    cout << t2->getName() << endl;
+    if(t5!=nullptr) //it's suggested to test the dynamic cast return so that we don't blow if the cast failed
+    {
+        cout << t5->getName() << endl;
+    }
+    else
+    {
+        cout << "dynamic cast return nullptr" << endl;
+    }
+
+    //cout << t3->getName() << endl;
+    
+    
     
 }

@@ -25,7 +25,7 @@ account.o : account.hpp
 
 casts.o: casts.hpp
 
-Person.o: Person.hpp
+Person.o: Person.hpp Resource.hpp
 
 Tweeter.o: Tweeter.hpp Person.hpp
 

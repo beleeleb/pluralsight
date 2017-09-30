@@ -15,7 +15,7 @@ private:
     std::string m_name;
 public:
     Resource(std::string o_name);
-    ~Resource();
-    std::string getName() const {return m_name;}; //const since it doesn't change the member
+    virtual ~Resource();
+    virtual std::string getName() const {return m_name;}; //const since it doesn't change the member
 };
 #endif /* Resource_hpp */

@@ -44,6 +44,7 @@ void class_template_test();
 void testPtrsnRefs();
 void testConst();
 void allocTest();
-
-
+void memTest();
+void inheritTest();
+void cppCastings();
 #endif /* unitests1_hpp */
