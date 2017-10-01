@@ -18,6 +18,7 @@
 #include "PtrsnRefs.hpp"
 #include "Const.hpp"
 #include "Resource.hpp"
+#include "Stl.hpp"
 template <class T>
 T max(T& t1, T& t2)
 {
@@ -47,4 +48,5 @@ void allocTest();
 void memTest();
 void inheritTest();
 void cppCastings();
+void stlTests();
 #endif /* unitests1_hpp */

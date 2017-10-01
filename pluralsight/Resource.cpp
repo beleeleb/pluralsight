@@ -18,3 +18,9 @@ Resource::~Resource()
     cout << "destruct resource: " << m_name << endl;
 }
 
+void Resource::setName(std::string o_newname)
+{
+    m_name = o_newname;
+}
+
+

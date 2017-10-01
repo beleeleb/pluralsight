@@ -31,10 +31,11 @@ TEST_CASE("factorial test")
     //operators_test();
     //testPtrsnRefs();
     //testConst();
-    //allocTest();
-    //memTest();
-    //inheritTest();
-    //cppCastings();
+   // allocTest();
+    memTest();
+    inheritTest();
+    cppCastings();
+     stlTests();
     return 0;
 }
 

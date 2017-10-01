@@ -293,13 +293,16 @@ void cppCastings()
     cout << p->getName() << endl;
     //Tweeter* t2  = p; // no way to init dervied class from base without casting the handle to a dervied one.
     Tweeter* t2  = static_cast<Tweeter*>(p); // We need to use static_cast.
+    cout << t2->getName() << endl;
+
     //int i = 6;
     //Tweeter* t3 = (Tweeter*)&i;  //we could c style cast to allow this but it won't check the validity of the type we are using
+    //cout << t3->getName() << endl;
+
     //Tweeter* t4 = static_cast<Tweeter*>(&i);  //static cast will warn us at compile time here that we can't case from int* to Tweeter*.
     Resource something("check");
-    Tweeter* t5 = dynamic_cast<Tweeter*>(&something); //dynamic_cast can only accept polymorphic and non primitive type.
+    Tweeter* t5 = dynamic_cast<Tweeter*>(&something); //dynamic_cast can only accept polymorphic and non primitive type. since Resource isn't related to Tweeter it's will fail to cast.
 
-    cout << t2->getName() << endl;
     if(t5!=nullptr) //it's suggested to test the dynamic cast return so that we don't blow if the cast failed
     {
         cout << t5->getName() << endl;
@@ -309,8 +312,10 @@ void cppCastings()
         cout << "dynamic cast return nullptr" << endl;
     }
 
-    //cout << t3->getName() << endl;
     
-    
-    
+}
+
+void stlTests()
+{
+    vectorTest();
 }
