@@ -13,5 +13,6 @@
 #include "Resource.hpp"
 #include <memory>
 void vectorTest();
+void mapTest();
 
 #endif /* stl_hpp */

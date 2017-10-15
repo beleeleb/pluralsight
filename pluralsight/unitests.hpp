@@ -49,4 +49,6 @@ void memTest();
 void inheritTest();
 void cppCastings();
 void stlTests();
+void lambdasTest();
+
 #endif /* unitests1_hpp */

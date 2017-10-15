@@ -319,3 +319,68 @@ void stlTests()
 {
     vectorTest();
 }
+
+void lambdasTest()
+{
+    vector <int>int_arr ;
+    int_arr.push_back(5);
+    int_arr.push_back(6);
+    int_arr.push_back(4);
+    int_arr.push_back(9);
+    int_arr.push_back(1);
+    
+    for_each(int_arr.begin(), int_arr.end(), [](int lam_num){
+        cout << "lam_num: " << lam_num << endl;
+    }
+             );
+    
+    for_each(int_arr.begin(), int_arr.end(), [](int lam_num)
+         {
+             if(lam_num%2)
+             {
+                 cout << lam_num << " is odd" << endl;
+             }
+             
+             else
+             {
+                 cout << lam_num << " is even" << endl;
+             }
+         }
+         );
+    
+    vector<int> cubed;
+    transform(int_arr.begin(), int_arr.end(), back_inserter(cubed), [](int n){return  n*n*n;}); // since it's all in one line, it implicity knows the return value of the lambda. the cubing operation is done on each of the new elements insterted to the new cubed vector
+    for_each(cubed.begin(), cubed.end(), [](int n) {cout << "n is : " << n << endl;} );
+    
+    vector <double> mixed;
+    transform(int_arr.begin(), int_arr.end(), back_inserter(mixed), [](int n)->double
+              {
+                  if(n%2 == 0) //if even -  cube
+                  {
+                      return n*n*n;
+                  }
+                  
+                  else
+                  {
+                      return n/2.0;
+                  }
+              }
+          );
+    for_each(mixed.begin(), mixed.end(), [](double n){cout << "mixed n: " << n << endl;});
+    
+    int x = 3;
+    int y =8;
+    
+    vector <int> poll;
+    poll.push_back(23);
+    poll.push_back(5);
+    poll.push_back(7);
+    for_each(poll.begin(), poll.end(), [x,y](int n)
+         {
+                 if(n<=y && n>=x)
+                 {
+                     cout << n << " in range between " << x<< " and " << y << endl;
+                 }
+          }
+     );
+}

@@ -10,7 +10,25 @@
 #include "Person.hpp"
 #include <vector>
 #include <iostream>
+#include <map>
+#include <algorithm>
 using namespace std;
+
+void printPerson(const Person & p)
+{
+    cout << "age is: " << p.getAge() << endl;
+}
+
+void printInt(int i)
+{
+    cout << "num is: " << i << endl;
+}
+
+bool isOdd(int num)
+{
+    return num%2;
+}
+
 void vectorTest()
 {
     vector<int> v;
@@ -53,6 +71,54 @@ void vectorTest()
         pi->setAge(28);
     }
     
+    for_each(vp.begin(), vp.end(), printPerson);
+    
+    auto o = find_if(v.begin(), v.end(), isOdd); //look for the first element that is odd between beg to end. if none found, we won't enter the while, but if we found we, we keep looking for more odd numbers inside the loop, thus we use another find_if inside from the cur place till the end.
+    
+    while(o!=v.end())
+    {
+        cout << "num: " << *o << endl;
+        o = find_if(++o, v.end(), isOdd);
+    }
+    
+    sort(v.begin(), v.end());
+    for_each(v.begin(), v.end(), printInt);
+    
+    unsigned long length = p1.getName().size();
+    cout << "p1 length: " <<length<< endl;
+    cout << "p1 5 sub string " << p1.getName().substr(0,5) << endl; // print the sub string between 0 to 5 chars
+    
+
 }
 
+void mapTest()
+{
+    Person ahmad("ahamd", "mahmud", 24);
+    Person luie("luie", "ck", 43);
+    
+    map<int,Person> people;
+    people[ahmad.getAge()] = ahmad;
+    people[luie.getAge()] = luie;
+    
+    Person dot("dot", "kaee", 65);
+    pair<int,Person> p (dot.getAge(), dot);
+    
+    people.insert(p); //the members are sorted by key in the map
+    
+    
+    for(auto mi = people.begin(); mi!=people.end(); ++mi)
+    {
+        cout << "name: " <<mi->second.getName() << " age:  "<< mi->first << endl;
+    }
+    
+    auto found = people.find(43);
+    cout << "\nfound name:" << found->second.getName() <<endl;
+    
+    //alterntaive to using find is by using square brackets.
+    string name = people[65].getName();
+    
+    cout << "array find: " << name << endl;
+    
+}
 
+ 

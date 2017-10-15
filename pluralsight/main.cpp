@@ -36,6 +36,8 @@ TEST_CASE("factorial test")
     inheritTest();
     cppCastings();
      stlTests();
+     mapTest();
+     lambdasTest();
     return 0;
 }
 
