@@ -50,5 +50,6 @@ void inheritTest();
 void cppCastings();
 void stlTests();
 void lambdasTest();
+void exceptionTest();
 
 #endif /* unitests1_hpp */

@@ -9,6 +9,7 @@
 #include "unitests.hpp"
 #include "Status.hpp"
 #include <memory>
+#include <stdexcept>
 using namespace std;
 void bank_test(void)
 {
@@ -371,11 +372,11 @@ void lambdasTest()
     int x = 3;
     int y =8;
     
-    vector <int> poll;
-    poll.push_back(23);
-    poll.push_back(5);
-    poll.push_back(7);
-    for_each(poll.begin(), poll.end(), [x,y](int n)
+    vector <int> vec;
+    vec.push_back(23);
+    vec.push_back(5);
+    vec.push_back(7);
+    for_each(vec.begin(), vec.end(), [x,y](int n) //capturing x & y from scope by value - they are const
          {
                  if(n<=y && n>=x)
                  {
@@ -383,4 +384,70 @@ void lambdasTest()
                  }
           }
      );
+    
+    x = 2;
+    y=6;
+    
+    for_each(vec.begin(), vec.end(), [=](int n)//by = we mean capture everything from scope, though actually it capture only what it needs from scope
+         {
+             if(n<=y && n>=x)
+             {
+                 cout << n << " in range between " << x<< " and " << y << endl;
+             }
+         }
+     );
+    
+    x=1;
+    y=5;
+    for_each(vec.begin(), vec.end(), [=](int& r) mutable //mutable allows changing the captured vars by value - though they won't be saved after lambda goes out of scope. we pass the parameter by reference to change the actual value in the vector after going out of scope.
+             {
+                 const int old = r;
+                 r *=2;
+                 x=y;
+                 y = old;
+             }
+             );
+    
+    vec.clear(); //this method clears the values in the vec
+    
+    for(int i = 0; i< 10; ++i) {vec.push_back(i);}
+    
+    for_each(vec.begin(), vec.end(), [&x, &y](int& r)//capture x & y by reference so their modified values will be kept after going out of scope, same for the parameter
+    {
+        const int old = r;
+        r *=2;
+        x=y;
+        y = old;
+    });
+    
+    for_each(vec.begin(), vec.end(), [x, y](int m){cout << m << " "  ;});
+    vec.clear();
+    int i = 0;
+    generate_n(back_inserter(vec), 10, [&]{return i++;}); // this function inserts to vector, for 10 times, the value we generate in the lambda, since we are doing so by reference, the value of i will be changed after going out of scope;
+    
+    
+}
+void exceptionTest()
+{
+    //example of an std::out-of-range exception
+    try{
+        
+    
+    vector <int> v ;
+    v.push_back(5);
+    cout << v.at(99) << endl;
+    
+    }
+    
+    //important to learn the differnet possible exception to check by reading stdexcept
+    catch(out_of_range& e) //catch out of range exception by reference - important to keep expection hierarcy
+    {
+        cout << e.what() << endl;
+    }
+    
+    catch(exception &e) //catch general exception by reference
+    {
+        cout << e.what() << endl;
+    }
+
 }

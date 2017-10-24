@@ -32,12 +32,13 @@ TEST_CASE("factorial test")
     //testPtrsnRefs();
     //testConst();
    // allocTest();
-    memTest();
-    inheritTest();
-    cppCastings();
-     stlTests();
-     mapTest();
-     lambdasTest();
+    //memTest();
+    //inheritTest();
+    //cppCastings();
+     //stlTests();
+     //mapTest();
+     //lambdasTest();
+     exceptionTest();
     return 0;
 }
 
