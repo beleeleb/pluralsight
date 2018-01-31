@@ -8,8 +8,10 @@
 
 #include "unitests.hpp"
 #include "Status.hpp"
+#include "Noise.hpp"
 #include <memory>
 #include <stdexcept>
+#include <cstring>
 using namespace std;
 void bank_test(void)
 {
@@ -429,12 +431,15 @@ void lambdasTest()
 }
 void exceptionTest()
 {
+    Noise oops("oops"); //since this is outside of the try, once the excpetion goes off, this object won't be destructed.
     //example of an std::out-of-range exception
     try{
         
-    
+    Noise beep("beep");
+    auto testPtr = make_shared<Noise>("sleep"); //RAII Revisited, no need to destruct it manualy as the dtor is actiavted upon end of scope
     vector <int> v ;
     v.push_back(5);
+    Person p("money", "matters", -1);
     cout << v.at(99) << endl;
     
     }
@@ -442,12 +447,79 @@ void exceptionTest()
     //important to learn the differnet possible exception to check by reading stdexcept
     catch(out_of_range& e) //catch out of range exception by reference - important to keep expection hierarcy
     {
-        cout << e.what() << endl;
+        cout << "out of range exception " << e.what() << endl;
     }
     
-    catch(exception &e) //catch general exception by reference
+    catch(exception& e) //catch general exception by reference - it's important to keep it with reference so it will polymorphize to the right exception according to the exception hierarchy and not cause slicing which will resolve with losing the derived exception type!1
     {
         cout << e.what() << endl;
     }
 
+}
+int doubler(int i)
+{
+    return i*2;
+}
+
+int tripler(int i)
+{
+    return i *3;
+}
+
+typedef int (*func) (int);
+typedef int(Utility::* UF)();
+void c_legacy()
+{
+
+    
+    func f;
+    f = doubler;
+    cout << f(2) << endl;
+    f = tripler;
+    cout << f(3) << endl;
+    
+    Utility u(4);
+    UF action;
+    action = &Utility::tripler;
+    cout << "res1: " << (u.*action)()<< " res2: " << u.tripler() << endl; //we can use dereferning of function pointer to invoke the member function
+    
+    
+    int ints[3];
+    ints[0] = 3;
+    *(ints +2) = 4;
+    
+    float floats[] = {1.0,2.0,3.0};
+    int *Ia = new int[4];
+    Ia[1] = 3;
+    *(Ia+1) = 4;
+    int localsz = sizeof(floats)/sizeof(floats[0]);
+    int freesz = sizeof(Ia); //this return the size of pointer to int but not the size of the allocation.
+    int freesz2 = sizeof(Ia[0]);
+    
+    cout << "localsz: " << localsz << endl;
+    cout << "freesz: " << freesz << endl;
+    cout << "freesz2: " << freesz2 << endl;
+    delete[] Ia;
+    
+    char* str = new char[strlen("hello kate")];
+    strcpy(str,"hello");
+    strcat(str, "    kate"); //bad because it overrides the memory and adds '\0' as well, when allocating or using strcat we have into account that strcat adds extra '\0';
+    
+    char hello[] = {'w','o','r','l','d','\0'}; //we must add '\0' here, so that strlen won't read something it shouldn't until it finds '\0'.
+    cout << "len of hello: " << strlen(hello) << endl;
+    
+    string good("hello"); //we get capacity and length
+    good+= " world"; //we append with auto-resize
+    char *old_str = new char[good.length() + 1]; //make sure we save 1 space for null terminator
+    //s3 = s or s3 = s.c_srt() wont work here! we need to use strcpy
+    strcpy(old_str, good.c_str());
+    
+    cout <<"old_str: "<< old_str << " good.length() " << good.length()<< " good cap: " << good.capacity() <<endl;
+    
+    delete []str;
+    delete []old_str;
+    
+    
+
+    
 }

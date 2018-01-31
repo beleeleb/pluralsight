@@ -7,13 +7,22 @@
 //
 
 #include "Person.hpp"
+#include "Noise.hpp"
 #include <iostream>
+#include <stdexcept>
 using namespace std;
 Person::Person(string o_firstName, std::string o_lastName, int o_age):m_firstName(o_firstName), m_lastName(o_lastName), m_age(o_age)
 #ifdef RULEOF3
 , m_pResource(nullptr)
 #endif
 {
+    Noise bloop("bloop");
+    if(m_age <= 0)
+    {
+        throw invalid_argument("age cannot be zero or less");
+    }
+    
+    
     std::cout << "construct Person: " << getName() <<std::endl;
 }
 

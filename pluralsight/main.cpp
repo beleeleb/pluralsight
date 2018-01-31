@@ -38,7 +38,8 @@ TEST_CASE("factorial test")
      //stlTests();
      //mapTest();
      //lambdasTest();
-     exceptionTest();
+     //exceptionTest();
+     c_legacy();
     return 0;
 }
 

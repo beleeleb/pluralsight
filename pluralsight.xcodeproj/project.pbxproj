@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C75590D21FA4FCF200188C90 /* Noise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C75590D01FA4FCF200188C90 /* Noise.cpp */; };
+		C783196C1FF18FFB00DCF9CF /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C783196A1FF18FFB00DCF9CF /* Utility.cpp */; };
 		C79B15E11F40C50100EB9280 /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C79B15DF1F40C50100EB9280 /* Person.cpp */; };
 		C79B15E61F40DDF200EB9280 /* Tweeter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C79B15E41F40DDF200EB9280 /* Tweeter.cpp */; };
 		C79B15EF1F50AA1600EB9280 /* Accum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C79B15ED1F50AA1600EB9280 /* Accum.cpp */; };
@@ -35,6 +37,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C75590D01FA4FCF200188C90 /* Noise.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Noise.cpp; sourceTree = "<group>"; };
+		C75590D11FA4FCF200188C90 /* Noise.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Noise.hpp; sourceTree = "<group>"; };
+		C783196A1FF18FFB00DCF9CF /* Utility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
+		C783196B1FF18FFB00DCF9CF /* Utility.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utility.hpp; sourceTree = "<group>"; };
 		C79B15DF1F40C50100EB9280 /* Person.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Person.cpp; sourceTree = "<group>"; };
 		C79B15E01F40C50100EB9280 /* Person.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Person.hpp; sourceTree = "<group>"; };
 		C79B15E41F40DDF200EB9280 /* Tweeter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tweeter.cpp; sourceTree = "<group>"; };
@@ -87,6 +93,8 @@
 				C79B15E81F422B9A00EB9280 /* Status.hpp */,
 				C79B15ED1F50AA1600EB9280 /* Accum.cpp */,
 				C79B15EE1F50AA1600EB9280 /* Accum.hpp */,
+				C75590D01FA4FCF200188C90 /* Noise.cpp */,
+				C75590D11FA4FCF200188C90 /* Noise.hpp */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -180,6 +188,8 @@
 			children = (
 				C7FEAB751F7F8E4400CFA7A5 /* Stl.cpp */,
 				C7FEAB761F7F8E4400CFA7A5 /* Stl.hpp */,
+				C783196A1FF18FFB00DCF9CF /* Utility.cpp */,
+				C783196B1FF18FFB00DCF9CF /* Utility.hpp */,
 			);
 			name = "Fundamentals part 2";
 			sourceTree = "<group>";
@@ -253,6 +263,8 @@
 				C7CF9D7D1F018C5E002678C7 /* unitests.cpp in Sources */,
 				C7DD1C581F686BB100005D0D /* Const.cpp in Sources */,
 				C7CF9D811F0EBFE2002678C7 /* casts.cpp in Sources */,
+				C783196C1FF18FFB00DCF9CF /* Utility.cpp in Sources */,
+				C75590D21FA4FCF200188C90 /* Noise.cpp in Sources */,
 				C7CF9D711EF9B824002678C7 /* collections.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

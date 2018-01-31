@@ -19,6 +19,7 @@
 #include "Const.hpp"
 #include "Resource.hpp"
 #include "Stl.hpp"
+#include "Utility.hpp"
 template <class T>
 T max(T& t1, T& t2)
 {
@@ -51,5 +52,5 @@ void cppCastings();
 void stlTests();
 void lambdasTest();
 void exceptionTest();
-
+void c_legacy();
 #endif /* unitests1_hpp */
